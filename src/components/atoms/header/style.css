@@ -1,0 +1,37 @@
+.header-container.MuiContainer-root {
+  padding: 0;
+}
+
+.logo {
+  height: 32px;
+  width: 108px;
+}
+
+.header-link {
+  color: var(--text-clr);
+  margin-right: 32px;
+  font-size: var(--h6);
+  text-decoration: none;
+  font-weight: var(--font-weight-600);
+  line-height: var(--line-height-24);
+  padding: 10px, 18px, 10px, 18px;
+}
+
+.header-link.active {
+  color: var(--white);
+  font-weight: var(--font-weight-700);
+}
+
+.header-link-sm {
+  color: var(--border-clr);
+  text-align: center;
+  font-size: var(--subtitle1);
+  text-decoration: none;
+  font-weight: var(--font-weight-500);
+  line-height: var(--line-height-20);
+}
+
+.header-link-sm.active {
+  color: var(--primary);
+  font-weight: var(--font-weight-700);
+}

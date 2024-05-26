@@ -1,0 +1,67 @@
+.error-msg {
+  max-width: 350px;
+  color: var(--error);
+  padding: 2px 0;
+  margin-top: 2px;
+  font-size: var(--subtitle1);
+  font-weight: var(--font-weight-300);
+}
+
+.success-msg {
+  color: var(--success);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  padding-right: 20px;
+  margin-bottom: 8px;
+  padding-top: 20px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="number"],
+select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border-clr);
+}
+
+.submit {
+  align-items: center;
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  padding: 5px 10px;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 20px;
+  border: 0;
+  height: 40px;
+  width: 200px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: var(--btn-font);
+  font-weight: var(--font-weight-600);
+  line-height: var(--btn-line-heigh);
+}
+
+@media screen and (max-width: 600px) {
+  .error-msg {
+    max-width: 100%;
+  }
+
+  .form-control {
+    flex-direction: column;
+  }
+
+  .form-control input[type="text"],
+  .form-control input[type="password"] {
+    width: inherit;
+  }
+}

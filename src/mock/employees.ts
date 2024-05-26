@@ -1,0 +1,60 @@
+import { Employee } from "models/employee";
+
+export const EMPLOYEES: Employee[] = [
+  {
+    id: 1,
+    fullName: "Test User 1",
+    email: "test.user@mail.com",
+    phone: 3787173737373,
+    role: "Manager 1",
+    salary: 11000,
+  },
+  {
+    id: 2,
+    fullName: "Test User 2",
+    email: "test2.user@mail.com",
+    phone: 3787323737373,
+    role: "Manager 2",
+    salary: 12000,
+  },
+  {
+    id: 3,
+    fullName: "Test User 3",
+    email: "test3.user@mail.com",
+    phone: 3787373737373,
+    role: "Manager 3",
+    salary: 13000,
+  },
+  {
+    id: 4,
+    fullName: "Test User 4",
+    email: "test4.user@mail.com",
+    phone: 3787673737373,
+    role: "Manager 4",
+    salary: 14000,
+  },
+  {
+    id: 5,
+    fullName: "Test User 5",
+    email: "test5.user@mail.com",
+    phone: 3785373737373,
+    role: "Manager 5",
+    salary: 15000,
+  },
+  {
+    id: 6,
+    fullName: "Test User 6",
+    email: "test6.user@mail.com",
+    phone: 3787673737373,
+    role: "Manager 6",
+    salary: 16000,
+  },
+  {
+    id: 7,
+    fullName: "Test User 7",
+    email: "test7.user@mail.com",
+    phone: 3787773737373,
+    role: "Manager 7",
+    salary: 17000,
+  },
+];

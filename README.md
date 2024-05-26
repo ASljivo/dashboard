@@ -10,7 +10,7 @@
 ## Node and npm
 
 - [NVM](https://github.com/creationix/nvm) is used to specify Node version
-- Node version used on this project is v17.0.0
+- Node version used on this project is v18.20.2
 
 ## Available Scripts
 
