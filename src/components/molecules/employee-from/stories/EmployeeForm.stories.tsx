@@ -2,11 +2,19 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { EmployeeForm } from "../EmployeeForm";
 import { within, fn, userEvent, expect } from "@storybook/test";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "../../../../theme";
 
 const meta = {
   title: "Components/Molecules/EmployeeForm",
   component: EmployeeForm,
-  decorators: [(Story) => <Story />],
+  decorators: [
+    (Story) => (
+      <ThemeProvider theme={theme}>
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
@@ -29,14 +37,11 @@ export const EmployeeFormError: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-
     const submitButton = canvas.getByRole("button", { name: /SUBMIT/i });
     await expect(submitButton).toBeInTheDocument();
     await userEvent.click(submitButton);
 
-    const errorMessage = canvas.getAllByText(
-      "Full Name is required."
-    );
+    const errorMessage = canvas.getAllByText("Full Name is required.");
     await expect(errorMessage).toBeInTheDocument();
   },
 };

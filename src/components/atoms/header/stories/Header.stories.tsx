@@ -1,29 +1,30 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Header } from '../Header';
-import { BrowserRouter } from 'react-router-dom';
+import { Header } from "../Header";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "../../../../theme";
 
 const meta = {
-  title: 'Components/Atoms/Header',
+  title: "Components/Atoms/Header",
   component: Header,
   decorators: [
     (Story) => (
-      <BrowserRouter>
-        <Story />
-      </BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Story />
+        </BrowserRouter>
+      </ThemeProvider>
     ),
   ],
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
-  args: {
-  },
+  args: {},
 } satisfies Meta<typeof Header>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const HeaderContent: Story = {
-  
-};
+export const HeaderContent: Story = {};

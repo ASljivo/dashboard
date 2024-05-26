@@ -2,11 +2,19 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { EmployeeTable } from "../EmployeeTable";
 import { within, fn, userEvent, expect } from "@storybook/test";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "../../../../theme";
 
 const meta = {
   title: "Components/Organizams/EmployeeTable",
   component: EmployeeTable,
-  decorators: [(Story) => <Story />],
+  decorators: [
+    (Story) => (
+      <ThemeProvider theme={theme}>
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
