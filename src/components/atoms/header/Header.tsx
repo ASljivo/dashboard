@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import logo from "../../../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
-import { HeaderLink } from "../../../models/header";
 import { pages } from "./config";
 
 export const Header: FC = () => {
