@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { FC } from "react";
-
+// This page contains simple text to demonstrate simple page.
 export const Other: FC = () => {
   return (
     <Box sx={{ mt: 3 }}>

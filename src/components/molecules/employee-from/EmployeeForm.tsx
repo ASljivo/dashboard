@@ -2,7 +2,9 @@ import "./styles.css";
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FormProps } from "../../../models/form";
+import { Typography } from "@mui/material";
 
+// This is custom form all fields and style are based on plain html and css.
 export const EmployeeForm: FC<FormProps> = ({ callback }: FormProps) => {
   const [successMsg, setSuccessMsg] = useState("");
   const {
@@ -13,6 +15,7 @@ export const EmployeeForm: FC<FormProps> = ({ callback }: FormProps) => {
   } = useForm();
 
   const onSubmit = (data: any) => {
+    // Return employee data on table component that we can updated table.
     callback(data);
     setSuccessMsg("User registration is successful.");
     reset();
@@ -20,6 +23,9 @@ export const EmployeeForm: FC<FormProps> = ({ callback }: FormProps) => {
 
   return (
     <div className="App">
+      <Typography variant="h3" textAlign="center" gutterBottom>
+        Add new employee
+      </Typography>
       <form onSubmit={handleSubmit(onSubmit)}>
         {successMsg && <p className="success-msg">{successMsg}</p>}
         <div className="form-control">

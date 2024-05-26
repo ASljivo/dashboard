@@ -27,6 +27,7 @@ export const EmployeeTable: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openErrorMessage, setOpenErrorMessage] = useState(false);
 
+  // Fetching data on load.
   const fetchData = () => {
     get()
       .then((data) => {
@@ -42,6 +43,7 @@ export const EmployeeTable: FC = () => {
     fetchData();
   }, []);
 
+  // Handling add new employee and updated table data after successfully added.
   const addNewEmployee = (employee: Employee) => {
     set(employee)
       .then((data: Employee[]) => {
@@ -54,14 +56,17 @@ export const EmployeeTable: FC = () => {
       });
   };
 
+  // Handle open form modal to add new employee
   const openModal = () => {
     setIsModalOpen(true);
   };
 
+  // Handle close form modal to add new employee
   const closeModal = () => {
     setIsModalOpen(false);
   };
 
+  // Handle table sorting logic
   const handleRequestSort = (
     event: React.MouseEvent<unknown>,
     property: keyof Employee
@@ -82,10 +87,11 @@ export const EmployeeTable: FC = () => {
     setPage(0);
   };
 
-  // Avoid a layout jump when reaching the last page with empty rows.
+  // Logic for jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - data.length) : 0;
 
+  // Handling updateing row only when dependecies changed
   const visibleRows = useMemo(
     () =>
       stableSort(data, getComparator(order, orderBy)).slice(
@@ -95,6 +101,7 @@ export const EmployeeTable: FC = () => {
     [order, orderBy, page, rowsPerPage, data]
   );
 
+  // Handling close error snackbar
   const handleClose = (
     event: React.SyntheticEvent | Event,
     reason?: string

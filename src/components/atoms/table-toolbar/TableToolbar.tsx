@@ -24,7 +24,7 @@ export const TableToolbar: FC<TableToolbarProps> = (
 
       <Button
         variant="contained"
-        onClick={() => props.openModal("buy")}
+        onClick={() => props.openModal()}
         sx={{ width: "120px" }}
       >
         Add New

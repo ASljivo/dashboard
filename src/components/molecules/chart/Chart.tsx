@@ -22,6 +22,7 @@ interface props {
 export const Chart: FC<props> = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [contentData, setContentData] = useState<ChartProps>(CHART_INIT);
+
   const openModal = (content: ChartProps) => {
     setIsModalOpen(true);
     setContentData(content);
@@ -31,6 +32,7 @@ export const Chart: FC<props> = ({ data }) => {
     setIsModalOpen(false);
   };
 
+  // Handle logic for displaying percentage label on chart by calculationg total value and single segment value
   const getArcLabel = ({ value }: Omit<DefaultizedPieValueType, "label">) => {
     const total = data.map((item) => item.value).reduce((a, b) => a + b, 0);
     const percent = value / total;

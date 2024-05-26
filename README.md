@@ -1,4 +1,15 @@
 # Dashboard app
+### This is dashoard app. Header contains links to pages: Dashbaord, Table and Other:
+
+- Dashbaord page contain two pie charts. Click on page chart will trigger open details modal.
+
+- Table page contains employee table with five columns. On the top right side above tbale there is ADD NEW button which trigger open Add new Employee form. Form containts fileds with validations. After successfully filling data new employee will be added into table.
+Modal and form components are custom implemented by usid plain html and css.
+
+- Other page contains simple text.
+
+- Project is based on vustom theme. Configuration is in src\theme.ts file. For custom css style theme configuration  variables are in src\main.css file.
+
 
 ## Starting project
 
@@ -27,10 +38,6 @@ Start Storybook. Storybook collects completely anonymous data to help us improve
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.
-Code coverage are: File  
-| % Stmts | % Branch | % Funcs | % Lines |  
-|---------|----------|---------|---------|
-| 75.58 | 61.01 | 60.75 | 76.69 |
 
 ### `npm run lint`
 
@@ -44,7 +51,11 @@ Builds the app for production to the `build` folder.
 ## Libraries used
 
 - [React router](https://reacttraining.com/react-router/)
-- [Axios](https://github.com/axios/axios)
+- [React hook form](https://react-hook-form.com/get-started)
+- [Material UI](https://mui.com/material-ui/getting-started/)
+- [Material UI Icons](https://mui.com/material-ui/material-icons/)
+- [Material UI Charts](https://mui.com/x/react-charts/)
+- [Storybook](https://storybook.js.org/)
 
 ## Project component structure - Atomic Design Pattern
 

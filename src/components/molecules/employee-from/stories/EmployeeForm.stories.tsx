@@ -30,6 +30,7 @@ export const EmployeeFormInitial: Story = {
   },
 };
 
+// This is case when error handling is demonstrated. If user click on submit before submit full name.
 export const EmployeeFormError: Story = {
   args: {
     callback: fn(),
@@ -46,6 +47,7 @@ export const EmployeeFormError: Story = {
   },
 };
 
+// This is case to demonstare successfully filled form data and user will get success message.
 export const EmployeeFormSuccess: Story = {
   args: {
     callback: fn(),

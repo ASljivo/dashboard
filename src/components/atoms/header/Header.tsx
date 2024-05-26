@@ -11,17 +11,13 @@ import MenuItem from "@mui/material/MenuItem";
 import logo from "../../../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 import { HeaderLink } from "../../../models/header";
-
-const pages: HeaderLink[] = [
-  { title: "Dashboard", link: "/" },
-  { title: "Table", link: "/table" },
-  { title: "Other", link: "/other" },
-];
+import { pages } from "./config";
 
 export const Header: FC = () => {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const { pathname } = useLocation();
 
+  // Handling opening navigation bar on smaller resolution
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -37,10 +33,11 @@ export const Header: FC = () => {
     >
       <Container maxWidth="xl" className="header-container">
         <Toolbar disableGutters>
+          {/* Hide this content on mobile resolution */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 3 }}>
             <img src={logo} className="logo" alt="logo" />
           </Box>
-
+          {/* Display this content on smaller resolution */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -73,6 +70,7 @@ export const Header: FC = () => {
               {pages.map(({ link, title }) => (
                 <MenuItem key={link} onClick={handleCloseNavMenu}>
                   <Link
+                    key={link}
                     to={link}
                     className={
                       link === pathname
@@ -95,9 +93,11 @@ export const Header: FC = () => {
           >
             <img src={logo} className="logo" alt="logo" />
           </Box>
+          {/* Hide this content on smaller resolution */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map(({ link, title }) => (
               <Link
+                key={link}
                 to={link}
                 className={
                   link === pathname ? "active header-link" : " header-link"

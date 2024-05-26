@@ -2,6 +2,8 @@ import { FC } from "react";
 import "./style.css";
 import { ModalProps } from "../../../models/modal";
 
+// This is cuastom component implemented by plain html and css.
+// Reusable component which accept any component which need to be displayed into modal
 export const Modal: FC<ModalProps> = ({
   isModalOpen,
   onClose,

@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-
+// Here is custom theme configuration.
 export const theme = createTheme({
   palette: {
     mode: "light",
@@ -142,7 +142,7 @@ export const theme = createTheme({
       lineHeight: "10px",
     },
     button: {
-      fontSize: "16px",
+      fontSize: "14px",
       lineHeight: "24px",
     },
   },

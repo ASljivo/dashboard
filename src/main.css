@@ -7,7 +7,7 @@
   --text-clr: #d0b5af;
   --border-clr: #667085;
   --white: #fff;
-  /* Font variables */
+  /* Font variables based on theme */
   --h5: 18px;
   --h6: 16px;
   --subtitle1: 14px;
@@ -17,7 +17,7 @@
   --font-weight-700: 700;
   ---line-height-20: 20px;
   ---line-height-24: 24px;
-  --btn-font: 16px;
+  --btn-font: 14px;
   --btn-line-height: 24px
 }
 
