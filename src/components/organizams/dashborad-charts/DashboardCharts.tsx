@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { Chart } from "components/molecules/chart/Chart";
-import { EMPLOYEES_CHART, PROJECTS_CHART } from "mock/chart";
+import { Chart } from "../../../components/molecules/chart/Chart";
 import { FC } from "react";
+import { EMPLOYEES_CHART, PROJECTS_CHART } from "../../../mock/chart";
 
 export const DashboardCharts: FC = () => {
   return (

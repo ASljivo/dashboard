@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { EmployeeTable } from "components/organizams/employee-table/EmployeeTable";
+import { EmployeeTable } from "../../organizams/employee-table/EmployeeTable";
 
 export const DataTable: FC = () => {
   return (

@@ -3,10 +3,10 @@ import { FC, useState } from "react";
 import { DefaultizedPieValueType } from "@mui/x-charts/models";
 import { PieChart, pieArcLabelClasses } from "@mui/x-charts/PieChart";
 import { Box } from "@mui/material";
-import { ChartProps } from "models/chart";
-import { CHART_INIT } from "mock/chart";
-import { ChartDetails } from "components/atoms/chart-details/ChartDetails";
-import { Modal } from "components/atoms/modal/Modal";
+import { ChartDetails } from "../../../components/atoms/chart-details/ChartDetails";
+import { Modal } from "../../../components/atoms/modal/Modal";
+import { ChartProps } from "../../../models/chart";
+import { CHART_INIT } from "../../../mock/chart";
 
 const sizing = {
   margin: { right: 5 },

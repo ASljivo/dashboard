@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./style.css";
-import { ModalProps } from "models/modal";
+import { ModalProps } from "../../../models/modal";
 
 export const Modal: FC<ModalProps> = ({
   isModalOpen,

@@ -1,5 +1,5 @@
-import { EMPLOYEES } from "mock/employees";
-import { Employee } from "models/employee";
+import { EMPLOYEES } from "../../mock/employees";
+import { Employee } from "../../models/employee";
 
 const timeout = 100;
 

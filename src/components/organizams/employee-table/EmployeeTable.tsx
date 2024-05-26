@@ -7,20 +7,19 @@ import TableContainer from "@mui/material/TableContainer";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { get, set } from "services/employee/Exmployee";
-import { Employee } from "models/employee";
 import { Snackbar } from "@mui/material";
-import { Modal } from "components/atoms/modal/Modal";
-import { EmployeeForm } from "components/molecules/employee-from/EmployeeForm";
-import { TableToolbar } from "components/atoms/table-toolbar/TableToolbar";
-import { CustomTableHead } from "components/atoms/table-head/TableHead";
-import { Order } from "models/table";
+import { Modal } from "../../../components/atoms/modal/Modal";
+import { EmployeeForm } from "../../../components/molecules/employee-from/EmployeeForm";
+import { CustomTableHead } from "../../../components/atoms/table-head/TableHead";
 import { getComparator, stableSort } from "./helper";
+import { TableToolbar } from "../../../components/atoms/table-toolbar/TableToolbar";
+import { Order } from "../../../models/table";
+import { Employee } from "../../../models/employee";
+import { get, set } from "../../../services/employee/Exmployee";
 
 export const EmployeeTable: FC = () => {
   const [order, setOrder] = useState<Order>("asc");
   const [orderBy, setOrderBy] = useState<keyof Employee>("id");
-  const [selected, setSelected] = useState<readonly number[]>([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [data, setData] = useState<Employee[]>([]);
@@ -110,7 +109,7 @@ export const EmployeeTable: FC = () => {
   return (
     <Box>
       <Paper sx={{ width: "100%", mb: 3 }}>
-        <TableToolbar numSelected={selected.length} openModal={openModal} />
+        <TableToolbar openModal={openModal} />
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -118,7 +117,6 @@ export const EmployeeTable: FC = () => {
             size={"medium"}
           >
             <CustomTableHead
-              numSelected={selected.length}
               order={order}
               orderBy={orderBy}
               onRequestSort={handleRequestSort}

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import { DashboardCharts } from "components/organizams/dashborad-charts/DashbaoradCharts";
 import { FC } from "react";
+import { DashboardCharts } from "../../organizams/dashborad-charts/DashboardCharts";
 
 export const Dashboard: FC = () => {
   return (

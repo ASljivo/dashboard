@@ -1,4 +1,4 @@
-import { HeadCell } from "models/table";
+import { HeadCell } from "../../../models/table";
 
 export const headCells: readonly HeadCell[] = [
     {

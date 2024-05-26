@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./style.css";
-import { ChartProps } from "models/chart";
 import { Stack, Typography } from "@mui/material";
+import { ChartProps } from "../../../models/chart";
 
 export const ChartDetails: FC<ChartProps> = ({ label, value, description }) => {
   return (

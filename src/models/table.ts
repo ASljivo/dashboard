@@ -3,12 +3,10 @@ import { Employee } from "./employee";
 export type Order = "asc" | "desc";
 
 export interface TableToolbarProps {
-  numSelected: number;
   openModal: Function;
 }
 
 export interface TableProp {
-  numSelected: number;
   onRequestSort: (
     event: React.MouseEvent<unknown>,
     property: keyof Employee

@@ -1,9 +1,9 @@
+import "./styles.css";
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
-import "./styles.css";
-import { FormProps } from "models/form";
+import { FormProps } from "../../../models/form";
 
-export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
+export const EmployeeForm: FC<FormProps> = ({ callback }: FormProps) => {
   const [successMsg, setSuccessMsg] = useState("");
   const {
     register,
@@ -25,6 +25,7 @@ export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
         <div className="form-control">
           <label>Full Name</label>
           <input
+            data-testid="fullName"
             type="text"
             {...register("fullName", {
               required: "Full Name is required.",
@@ -38,6 +39,7 @@ export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
         <div className="form-control">
           <label>Email</label>
           <input
+            data-testid="email"
             type="text"
             {...register("email", {
               required: "Email is required.",
@@ -55,6 +57,7 @@ export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
         <div className="form-control">
           <label>Phone</label>
           <input
+            data-testid="phone"
             type="text"
             {...register("phone", {
               required: "Phone is required.",
@@ -73,6 +76,7 @@ export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
         <div className="form-control">
           <label>Role</label>
           <select
+            data-testid="role"
             id="role"
             {...register("role", {
               required: "Salary is required.",
@@ -93,6 +97,7 @@ export const EmployeeForm: FC<FormProps> = ({callback}: FormProps) => {
         <div className="form-control">
           <label>Salary</label>
           <input
+            data-testid="salary"
             type="number"
             {...register("salary", {
               required: "Salary is required.",

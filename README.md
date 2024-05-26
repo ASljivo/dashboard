@@ -18,8 +18,11 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run storybook`
+Start Storybook. Storybook collects completely anonymous data to help us improve user experience.
 
 ### `npm test`
 

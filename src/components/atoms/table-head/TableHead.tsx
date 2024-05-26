@@ -1,10 +1,10 @@
 
 import { Box, TableCell, TableHead, TableRow, TableSortLabel } from "@mui/material";
 import { visuallyHidden } from "@mui/utils";
-import { Employee } from "models/employee";
-import { TableProp } from "models/table";
 import { FC } from "react";
 import { headCells } from "./config";
+import { TableProp } from "../../../models/table";
+import { Employee } from "../../../models/employee";
 
 export const CustomTableHead: FC<TableProp> = (props: TableProp) => {
     const { order, orderBy, onRequestSort } = props;

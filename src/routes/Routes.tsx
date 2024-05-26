@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { DASHBOARD, TABLE,OTHER} from "./routePaths";
-import { Dashboard } from "components/pages/dashboard/Dashboard";
 import { DataTable } from "../components/pages/table/Table";
 import { Other } from "../components/pages/other/Other";
+import { Dashboard } from "../components/pages/dashboard/Dashboard";
 
 export const AppRoutes: FC = () => (
     <Routes>

@@ -8,12 +8,12 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
-import { HeaderLink } from "models/header";
+import { HeaderLink } from "../../../models/header";
 
 const pages: HeaderLink[] = [
-  { title: "Dashbaord", link: "/" },
+  { title: "Dashboard", link: "/" },
   { title: "Table", link: "/table" },
   { title: "Other", link: "/other" },
 ];
@@ -31,7 +31,10 @@ export const Header: FC = () => {
   };
 
   return (
-    <AppBar position="static" sx={{paddingLeft:"40px", paddingRight: "40px"}}>
+    <AppBar
+      position="static"
+      sx={{ paddingLeft: "40px", paddingRight: "40px" }}
+    >
       <Container maxWidth="xl" className="header-container">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 3 }}>
